@@ -1,0 +1,21 @@
+<h2>Series Details</h2> 
+
+<hr/>
+<div *ngIf="series">
+  <div>
+    <label><b>Id: </b></label> {{series.id}}
+  </div>
+  <div>
+    <label><b>Series Name: </b></label> {{series.seriesName}}
+  </div>
+  <div>
+    <label><b>Start Date: </b></label> {{series.startDate}}
+  </div>
+  <div>
+    <label><b>End Date: </b></label> {{series.endDate}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Series List</button><br>

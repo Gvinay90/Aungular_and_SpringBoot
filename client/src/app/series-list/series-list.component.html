@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Series List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Series Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of series | async">
+            <td>{{s.id}}</td>
+            <td>{{s.seriesName}}</td>
+            <td>{{s.startDate}}</td>
+            <td>{{s.endDate}}</td>
+            <td><button (click)="updateSeries(s.id)"
+                 class="btn btn-info">Update</button>
+                <button (click)="deleteSeries(s.id)"
+                 class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click)="seriesDetail(s.id)"
+                 class="btn btn-info" style="margin-left: 10px">Detail</button>
+                <button (click)="seriesTeam(s.seriesName)"
+                 class="btn btn-info" style="margin-left: 10px">Teams</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

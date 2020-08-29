@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Team List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Team Name</th>
+            <th>Date Of Match</th>
+            <th>Series Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of team | async">
+            <td>{{t.id}}</td>
+            <td>{{t.teamName}}</td>
+            <td>{{t.dateOfMatch}}</td>
+            <td>{{t.seriesName}}</td>
+            <td><button (click)="updateTeam(t.id)"
+                 class="btn btn-info">Update</button>
+                <button (click)="deleteTeam(t.id)"
+                 class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click)="teamDetail(t.id)"
+                 class="btn btn-info" style="margin-left: 10px">Detail</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
