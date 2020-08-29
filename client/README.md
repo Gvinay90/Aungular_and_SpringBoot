@@ -1,6 +1,6 @@
 # Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+Run `npm install` to install all the dependencies
 
 ## Development server
 
